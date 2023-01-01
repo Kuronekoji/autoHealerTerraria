@@ -5,3 +5,9 @@
 
  I was going to implement a way to check buffs / debuffs to account for cooldown, but got lazy as I had already cropped the healthbar out. Let me know if you 
  have any better ideas or implementations in this program.
+
+######Notes 
+-Your game resolution must be 1920x1080, otherwise the healthbar will not be found, this is to account for different monitors.
+-If Terraria is not in focus when cooldown is being counted, this will throw the timers more offsync so try to only use this when you are actively fighting or AFK.
+-Sometimes if the game is loading weird it may false trigger.
+
