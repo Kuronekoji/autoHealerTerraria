@@ -6,6 +6,7 @@ from windowcapture import WindowCapture
 import win32api, win32con, win32gui
 from PIL import Image, ImageTk
 import windowName
+import keyboard
 
 def mainCapture():
     # Change the working directory to the folder this script is in.
@@ -58,9 +59,11 @@ def mainCapture():
             # press the "h" key
             win32gui.SetForegroundWindow(hwnd)
             time.sleep(0.2)
-            win32api.keybd_event(0x48, 0, 0, 0)
+            #win32api.keybd_event(0x48, 0, 0, 0)
+            keyboard.press('h')
             time.sleep(0.2)
-            win32api.keybd_event(0x48, 0, win32con.KEYEVENTF_KEYUP, 0)
+            #win32api.keybd_event(0x48, 0, win32con.KEYEVENTF_KEYUP, 0)
+            keyboard.release('h')
 
             # start the timer
             time.sleep(0.5)
